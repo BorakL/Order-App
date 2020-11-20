@@ -1,0 +1,114 @@
+body{
+	height: 100vh;
+	width: 100%;
+	margin:0;
+	padding:0; 
+	box-sizing:border-box;
+	background-color: #F9FAFC;
+	color:#323232;
+    font-family: arial;
+}
+a{
+	text-decoration: none;
+	color:#323232; 
+}
+
+.home{
+	width:400px;
+	min-height:500px;
+	background-color:transparent;
+	position:absolute;
+	left:50%;
+	transform:translate(-50%,0);
+	margin-top: 100px;
+	border:1px solid;
+	border-color:transparent;
+	border-radius:10px 10px 10px 10px;
+	font-family:arial;
+	padding:0px;
+}
+
+.home>img{
+	width:120px;
+	height:120px;
+	position:relative;
+	left:33%;
+	margin-top:-67px;
+}
+.home>.poll-list{
+	overflow: auto;
+	height:350px;
+
+}
+.home>.poll-list>a{
+	text-decoration: none;
+
+}
+.home>.poll-list>a>.poll{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+  	grid-template-rows: 1fr 1fr;
+	grid-template-areas: 
+		"check-img poll-name poll-name poll-name"
+		"check-img poll-duration poll-duration poll-duration"
+	;
+	box-sizing: border-box; 
+	border:1px solid grey;
+	border-radius: 15px;
+	margin-bottom: 20px;
+	background-color:rgb(245, 245, 245);
+}
+.home>.poll-list>a>.poll:hover{
+	background-color:rgb(235, 235, 235);
+}
+
+.home>.poll-list>a>.poll>*{ 
+	min-height: 30px;  
+	padding-top: 15px;
+	text-align: start; 
+}
+
+.home>.poll-list>a>.poll>.check-img{
+	grid-area: check-img; 
+	position: relative;
+}
+.home>.poll-list>a>.poll>.check-img>img{ 
+	display: block;
+	position: absolute; 
+	width:60px;
+	top:15px;
+	left:20px;
+}
+.home>.poll-list>a>.poll>.poll-name{
+	grid-area: poll-name; 
+	font-weight: bold; 
+}
+.home>.poll-list>a>.poll>.poll-duration{
+	grid-area: poll-duration; 
+}
+.home>button{
+	display:block;
+	width:75%;
+	height:40px;
+	background-color:rgb(90,172,68);
+	border:1px solid grey;
+	margin:40px auto 40px ; 
+	color:white;
+	font-size:22px;
+	cursor:pointer;
+}
+
+@media screen and (min-width:600px){
+	body{
+		background-image: url('../../public/img/sandwich.jpg'); 
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		color:#323232;
+	}
+	.home{ 
+		background-color:white;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		padding:0 25px;
+	}
+}

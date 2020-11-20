@@ -1,0 +1,32 @@
+.header{
+    height:60px;
+    width:100%;
+    background-color:grey;
+    position:sticky;
+    top:0px; 
+    margin-bottom: 20px;
+}
+.header>.logo{
+    float:left;
+    box-sizing: border-box;
+}
+.header>.login{
+    padding-top: 10px;
+    float:right;
+    overflow: hidden;
+}
+.header>.login>*{
+    float:left;
+    margin-right:10px;
+    border:1px solid white;
+    color:white;
+    padding: 8px 20px;
+    background-color: transparent;
+}
+.header>.login>*:hover{
+    color:grey;
+    background-color: white;
+    font-weight: bold;
+    box-sizing: border-box;
+    cursor: pointer;
+}
